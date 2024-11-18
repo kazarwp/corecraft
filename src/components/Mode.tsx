@@ -6,34 +6,37 @@ import teamLeed2 from "../images/teamLeed2.png";
 import dev from "../images/dev.png";
 import host from "../images/host.png";
 import { Link } from "react-router-dom";
+import { PhotoSlider } from "./Slider";
 
 export const Mode = () => {
   return (
-    <div className="pt-[180px] laptop:pt-[240px] minilaptop:pt-[150px]">
-      <div className="flex minilaptop:flex-col minilaptop:items-center justify-center gap-[250px] laptop:gap-[50px]">
-        <div className="max-w-[400px] pt-[100px]">
+    <div className="pt-[180px] laptop:pt-[100px] minilaptop:pt-0">
+      <div className="flex minilaptop:flex-col minilaptop:items-center justify-center gap-[150px] ml-2 laptop:gap-[50px]">
+        <div className="max-w-[400px] pt-[100px] laptop:pt-[30px]">
           <Link to="/" className="text-base opacity-100 hover:opacity-45">
-            &nbsp;{content.mainTextModePage} &nbsp;&nbsp;&gt;
+            &nbsp;{content.mainTextModePage}
           </Link>
-          <button className="text-base text-[#E47500] opacity-100 hover:opacity-45">
+          <span>&nbsp;&nbsp;&gt;</span>
+          <span className="text-base text-[#E47500]">
             &nbsp;{content.aboutMode}
-          </button>
+          </span>
           <h2 className="font-bold text-3xl mt-[35px]">
             Режим GTM, это заруба, это грабёж
           </h2>
           <p className="text-base mt-[52px]">{content.GTM_text}</p>
-          <button className="flex bg-gradient-to-r from-[#FA8305] to-[#FB9E3C] p-[10px] text-base mt-[55px] rounded-[40px]">
+          <button className="flex bg-gradient-to-r from-[#FA8305] to-[#FB9E3C] pt-[10px]  pb-[10px] pl-[20px] pr-[20px] text-base mt-[55px] pad:m-auto pad:mt-[30px] rounded-[40px]">
             <p>{content.modeJoin}</p>
-            <p className="text-[20px] ml-[10px] mr-[10px]">→</p>
+            <p className="text-[20px] ml-[10px] mr-[10px]">&nbsp;&nbsp;→</p>
           </button>
         </div>
-        <img src={openPhoto2} alt="" />
+        {/* <img src={openPhoto2} alt="" className="mr-2"/> */}
+        <PhotoSlider />
       </div>
-      <div className="laptop:mt-[20px]">
-        <h2 className="ml-[380px] minilaptop:ml-7 minilaptop:text-4xl minilaptop:pb-[10px] text-2xl pb-[50px] max-w-[140px]">
+      <div className="laptop:mt-[20px] max-w-[1160px] m-auto">
+        <h2 className="ml-2 text-4xl mt-10 minilaptop:text-3xl minilaptop:pb-[10px] text-2xl pb-[50px] max-w-[140px]">
           {content.possibility}
         </h2>
-        <div className="flex pad:flex-col justify-center gap-[40px] laptop:gap-[20px]">
+        <div className="flex pad:flex-col gap-[40px] laptop:gap-[20px]">
           <div className="bg-[#0D0F0F] pt-[60px] pb-[60px] pl-[30px] pr-[30px]">
             <h3 className="bg-[#B000DC]/30 max-w-[140px] rounded-lg text-sm pl-3 pt-2 pb-2">
               {content.possibilityText}
@@ -64,7 +67,7 @@ export const Mode = () => {
         </div>
       </div>
       <div className="flex minilaptop:flex-col-reverse justify-center mt-[180px] minilaptop:mt-0 gap-[130px] laptop:gap-[50px] mb-[150px] minilaptop:mb-0 bg-[#0D0F0F] pt-[80px] pb-[80px]">
-        <img src={openPhoto2} alt="" className="rounded-[12px]" />
+        <img src={openPhoto2} className="mr-2 rounded-[12px]" alt=""/>
         <div className="max-w-[536px] pt-[100px] minilaptop:pt-0 minilaptop:ml-4">
           <p className="text-base mb-[32px]">Lorem ipsum</p>
           <h2 className="font-semibold text-3xl">{content.modePageRandom8}</h2>
@@ -72,7 +75,7 @@ export const Mode = () => {
         </div>
       </div>
       <div>
-        <h2 className="text-[45px] ml-[380px] minilaptop:ml-7 font-semibold">
+        <h2 className="text-[45px] minilaptop:text-3xl text-4xl max-w-[1160px] m-auto  minilaptop:ml-2 font-semibold">
           {content.modePageRandom10}
         </h2>
         <div className="flex justify-center gap-6 laptop:gap-1 mt-6 pad:flex-col">
@@ -118,13 +121,13 @@ export const Mode = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#0D0F0F] mt-[250px] minilaptop:mt-0 minilaptop:ml-4 pt-[100px]">
-        <div className="max-w-[1200px] m-auto">
+      <div className="bg-[#0D0F0F] pb-24 mt-[250px] ml-3 minilaptop:mt-0 minilaptop:ml-2 pt-[100px]">
+        <div className="max-w-[1200px] ml-1 mr-1 m-auto">
           <p className="text-base">{content.modePageRandom10}</p>
           <p className="mt-[25px] text-3xl font-semibold">
             {content.modePageRandom11}
           </p>
-          <p className="mt-[200px] text-base">{content.modePageRandom12}</p>
+          <p className="mt-[100px] text-base">{content.modePageRandom12}</p>
         </div>
       </div>
     </div>

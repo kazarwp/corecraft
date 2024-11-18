@@ -3,7 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      desktop: { "max": "1920px" }, // до 1920px (включительно)
+      tv: {"min": "1921px"}, 
+      desktop: { "max": "1920px" },
+      bg_desktop: {"max": "1919px"},
       desktoppoint: {"max": "1250px"},
       minidesktop: { "max": "1100px" },
       laptop: { "max": "1030px" },
@@ -27,5 +29,6 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-hamburgers")],
 };
+

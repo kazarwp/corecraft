@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import content from "../content.json";
 
-import mapLogo from "../images/maplogo.png"
+import mapLogo from "../images/maplogo.png";
 import Minecraft from "../images/steve_phone.png";
 import Online from "../images/div.svg";
 import telegram from "../images/telegram_button.png";
@@ -11,8 +11,8 @@ import discord from "../images/discord.png";
 export const Main = () => {
   return (
     <div className="">
-      <div className="flex justify-center min-h-screen pad:max-w-md pad:m-auto gap-6 pt-40 bg-[url('/src/images/Figures.png')]">
-        <div className="laptop:mt-[80px] desktop:mt-[80px]">
+      <div className="flex justify-center min-h-screen pad:max-w-md pad:m-auto gap-6 laptop:pt-0 pt-40 bg-[url('/src/images/Figures.png')] tv:bg-none">
+        <div className="minidesktop:mt-[70px] mt-[80px]">
           <div className="flex gap-20 pad:gap-10 mobile:gap-7 mobile:items-center mobile:ml-5">
             <p className="text-base pad:text-sm pad:w-[190px] mobile:text-xs mobile:w-auto opacity-45">
               {content.versionSupport}
@@ -38,19 +38,19 @@ export const Main = () => {
             {content.welcomeText2}
           </p>
           <Link to="/map" className="flex justify-center">
-            <div className="bg-[url('/src/images/Navigation1.svg')] w-[318px] h-[48px] mt-[100px]">
-              <img src={mapLogo} className="ml-[90px] mt-[15px]"/>
+            <div className="bg-[url('/src/images/Navigation1.svg')] w-[318px] h-[48px] mt-[100px] opacity-100 hover:opacity-70">
+              <img src={mapLogo} className="ml-[90px] mt-[15px]" />
             </div>
           </Link>
-          <div className="flex laptop:flex-col laptop:items-center mt-[90px] gap-[60px]">
-            <button className="flex bg-[url('/src/images/bd2.svg')] w-[253px] h-[64px] justify-start items-center gap-4">
+          <div className="flex laptop:flex-col laptop:items-center mt-[60px] gap-[30px]">
+            <button className="flex bg-[url('/src/images/bd2.svg')] w-[253px] h-[64px] justify-start items-center gap-4 opacity-100 hover:opacity-70">
               <img src={discord} alt="" className="w-[40px] ml-4" />
               <div>
                 <p className="text-start">{content.discord}</p>
                 <p className="text-sm opacity-45">{content.discordLink}</p>
               </div>
             </button>
-            <button className="flex bg-[url('/src/images/bd2.svg')] w-[253px] h-[64px] justify-start items-center gap-4">
+            <button className="flex bg-[url('/src/images/bd2.svg')] w-[253px] h-[64px] justify-start items-center gap-4 opacity-100 hover:opacity-70">
               <img src={telegram} alt="" className="w-[40px] ml-4" />
               <div>
                 <p className="text-start">{content.telegram}</p>
@@ -63,7 +63,7 @@ export const Main = () => {
           <img src={Minecraft} className="h-[850px]" alt="" />
         </div>
       </div>
-      <p className="absolute left-10 end-10 opacity-45 text-xs">
+      <p className="absolute left-10 end-10 pt-3 pb-5 opacity-45 text-base mobile:text-sm pad:text-center">
         {content.technicalSupport}
       </p>
     </div>

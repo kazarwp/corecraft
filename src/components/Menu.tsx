@@ -9,14 +9,14 @@ import vk from "../images/vk.png";
 export const Menu = () => {
   return (
     <>
-      <div className="absolute bg-[#0C1715] max-w-7xl mt-14 right-0 left-0 ml-auto mr-auto rounded-full flex justify-between border border-[#213F38]">
+      <div className="absolute laptop:hidden bg-[#0C1715] max-w-7xl mt-14 right-0 left-0 ml-auto mr-auto rounded-full flex justify-between border border-[#213F38]">
         <div className="flex m-5 mobile:ml-0 basis-1/3">
           <img src={logo} alt="logo" className="w-8 ml-8" />
           <h2 className="text-[#9B9B9B] ml-1 font-medium indent-px text-2xl p-0.5">
             {content.company}
           </h2>
         </div>
-        <div className="desktop:flex laptop:hidden gap-2 items-center basis-1/3 justify-center">
+        <div className="flex laptop:hidden gap-2 items-center basis-1/3 justify-center">
           <Link to="/" className="text-base opacity-45 hover:opacity-100">
             {content.main}
           </Link>
@@ -34,10 +34,10 @@ export const Menu = () => {
           </Link>
         </div>
         <div className="flex basis-1/3 mobile:pr-5 items-center justify-end gap-2 pr-9">
-          <a>
+          <a href="">
             <img src={discord} alt="discord" className="w-10" />
           </a>
-          <a>
+          <a href="">
             <img src={vk} alt="vk" className="w-10" />
           </a>
         </div>
